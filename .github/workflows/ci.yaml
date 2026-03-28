@@ -86,7 +86,8 @@ jobs:
         - name: checkout code
           uses: actions/checkout@v4
           with:
-            token: ${{ secrets.DEVOPS }}
+            token: ${{ secrets.DEVOPS }}   
+            # if not then secrets.GITHUB_TOKEN
 
         - name: Update tag in kubernetes deployment manifest
           run: | 
